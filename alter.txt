@@ -1,0 +1,12 @@
+create table LIBRARY (
+  libId integer primary key,
+  book TEXT not null,
+  author TEXT not null
+);
+
+insert into LIBRARY VALUES (1,'Абай жолы','Мұхтар Әуезов');
+insert into LIBRARY VALUES (2,'Бақытсыз Жамал','Міржақып Дулатұлы');
+insert into LIBRARY values (3,'Ұлпан','Ғабит Мүсірепов');
+insert into LIBRARY values (4,'Көшпенділер','Ілияс Есенберлин');
+
+alter table LIBRARY add edition date;
