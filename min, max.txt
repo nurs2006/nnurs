@@ -1,0 +1,21 @@
+create table LIBRARY (
+  libId integer primary key ,
+  book TEXT not null ,
+  author TEXT not null
+);
+
+insert into LIBRARY VALUES (1, 'Абай жолы','Мағжан Жұмабаев');
+
+select min(libId)
+from library
+
+create table LIBRARY (
+  libId integer primary key ,
+  book TEXT not null ,
+  author TEXT not null
+);
+
+insert into LIBRARY VALUES (1, 'Абай жолы','Мағжан Жұмабаев');
+
+select max(libId)
+from library
