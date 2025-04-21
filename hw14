@@ -1,0 +1,168 @@
+public class JavaBasicsExamples {
+
+    // 1. Variables
+    public static void variablesExample() {
+        String name = "Alice";
+        int age = 25;
+        double balance = 1540.75;
+        boolean isMember = true;
+        System.out.println("Variables Example:");
+        System.out.println("Name: " + name + ", Age: " + age + ", Balance: $" + balance + ", Member: " + isMember + "\n");
+    }
+
+    // 2. Reference Data Types
+    public static void referenceTypesExample() {
+        String greeting = "Hello, world!";
+        int[] numbers = {1, 2, 3};
+        System.out.println("Reference Data Types:");
+        System.out.println("Greeting length: " + greeting.length());
+        System.out.println("First number: " + numbers[0] + "\n");
+    }
+
+    // 3. If Statement
+    public static void ifExample() {
+        int temp = 32;
+        System.out.println("If Statement:");
+        if (temp > 30) {
+            System.out.println("It's hot outside.\n");
+        }
+    }
+
+    // 4. If-Else Statement
+    public static void ifElseExample() {
+        int age = 16;
+        System.out.println("If-Else Statement:");
+        if (age >= 18) {
+            System.out.println("You can vote.");
+        } else {
+            System.out.println("You cannot vote.");
+        }
+        System.out.println();
+    }
+
+    // 5. While Loop
+    public static void whileLoopExample() {
+        int count = 3;
+        System.out.println("While Loop:");
+        while (count > 0) {
+            System.out.println("Countdown: " + count);
+            count--;
+        }
+        System.out.println();
+    }
+
+    // 6. For Loop
+    public static void forLoopExample() {
+        System.out.println("For Loop:");
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Day " + i);
+        }
+        System.out.println();
+    }
+
+    // 7. Nested Loop
+    public static void nestedLoopExample() {
+        System.out.println("Nested Loop:");
+        for (int i = 1; i <= 2; i++) {
+            for (int j = 1; j <= 3; j++) {
+                System.out.println("Row " + i + ", Seat " + j);
+            }
+        }
+        System.out.println();
+    }
+
+    // 8. For-Each Loop
+    public static void forEachLoopExample() {
+        String[] tasks = {"Wash", "Cook", "Clean"};
+        System.out.println("For-Each Loop:");
+        for (String task : tasks) {
+            System.out.println("Task: " + task);
+        }
+        System.out.println();
+    }
+
+    // 9. Break & Continue
+    public static void breakContinueExample() {
+        System.out.println("Break & Continue:");
+        for (int i = 1; i <= 5; i++) {
+            if (i == 3) continue;
+            if (i == 5) break;
+            System.out.println(i);
+        }
+        System.out.println();
+    }
+
+    // 10. Java Methods
+    public static void sayHello() {
+        System.out.println("Hello from method!\n");
+    }
+
+    // 11. Method with Parameters
+    public static void greetUser(String name) {
+        System.out.println("Welcome, " + name + "!\n");
+    }
+
+    // 12. Method Overloading
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    public static double add(double a, double b) {
+        return a + b;
+    }
+
+    // 13. Java Scope
+    static int globalCount = 10;
+
+    public static void scopeExample() {
+        int localCount = 5;
+        System.out.println("Scope:");
+        System.out.println("Global: " + globalCount + ", Local: " + localCount + "\n");
+    }
+
+    // 14. Recursion
+    public static int factorial(int n) {
+        if (n == 0) return 1;
+        return n * factorial(n - 1);
+    }
+
+    // 15. Java Class Example
+    static class Car {
+        String model;
+        int year;
+
+        void display() {
+            System.out.println("Car Model: " + model + ", Year: " + year);
+        }
+    }
+
+    // Main method
+    public static void main(String[] args) {
+        variablesExample();
+        referenceTypesExample();
+        ifExample();
+        ifElseExample();
+        whileLoopExample();
+        forLoopExample();
+        nestedLoopExample();
+        forEachLoopExample();
+        breakContinueExample();
+
+        sayHello();
+        greetUser("Emma");
+
+        System.out.println("Method Overloading:");
+        System.out.println("Int sum: " + add(3, 4));
+        System.out.println("Double sum: " + add(3.5, 2.5) + "\n");
+
+        scopeExample();
+
+        System.out.println("Recursion - Factorial of 5: " + factorial(5) + "\n");
+
+        System.out.println("Class Example:");
+        Car myCar = new Car();
+        myCar.model = "Honda Civic";
+        myCar.year = 2022;
+        myCar.display();
+    }
+}
