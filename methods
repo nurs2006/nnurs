@@ -1,0 +1,59 @@
+1
+class Greetings {
+    void sayHello() {
+        System.out.println("Hello!");
+    }
+
+    void sayHello(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Greetings g = new Greetings();
+        g.sayHello();
+        g.sayHello("Anna");
+    }
+}
+
+2
+class PizzaOrder {
+    void orderPizza(String size, String topping) {
+        System.out.println("You ordered a " + size + " pizza with " + topping);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        PizzaOrder order = new PizzaOrder();
+        order.orderPizza("Large", "Pepperoni");
+    }
+}
+3
+class ScopeExample {
+    int x = 10; // this is a global/class variable
+
+    void showScope() {
+        int y = 5; // this is a local variable
+        System.out.println(x + y); // works fine
+    }
+
+    void anotherMethod() {
+        // System.out.println(y); // ❌ won't work — y only exists in showScope()
+    }
+}
+4
+class RecursionExample {
+    int factorial(int n) {
+        if (n == 1) return 1; // base case
+        return n * factorial(n - 1); // recursive call
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        RecursionExample r = new RecursionExample();
+        System.out.println(r.factorial(5)); // Output: 120
+    }
+}
